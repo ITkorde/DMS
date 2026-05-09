@@ -1,0 +1,732 @@
+
+
+public class start{
+public static void main(String args[])
+{
+System.out.println("Hello,Iam starting from today");
+}
+}
+============================================================
+#to swap two numbers
+1 using 3rd variable
+public class swap{
+public static void main (String args[])
+{
+int a=5 ;
+int b=9;
+int temp=0;
+System.out.println("before:"+a+","+b);
+temp=a;
+a=b;
+b=temp;
+System.out.println("After:"+a+","+b);
+}
+}
+------
+2 without using 3 rd
+public class swap{
+public static void main(String args[])
+{
+int a=10;
+int b=67;
+System.out.println("before:"+a+","+b);
+a=a+b;
+b=a-b;
+a=a-b;
+System.out.println("After:"+a+","+b);
+}
+}
+================
+# print only odd numbers
+public class odd{
+{
+public static void main(String arg[])
+{
+int n=100;
+for(int i=1;i<=100;i++)
+{
+if(i%2 != 0)
+System.out.println(i);
+}
+}
+}
+#using increment operator
+public static void main(String args[])
+{
+int n=50;
+for(int i=1;i<=50;i=i+2)
+{
+System.out.println(i);
+}
+}
+=================================
+#Reverse a number
+public class rev{
+public static void main(String args[])
+{
+int nub=1234567890;
+int rev=0;
+int reminder=0;
+while(nub>=1)
+{
+reminder=nub%10;
+rev=rev*10+reminder;
+nub/=10;
+}
+System.out.println(rev);
+}
+}
+===================================
+#palindrome(number is after revrse)
+public class pali
+{
+public static void main(String args[])
+{
+int n=2536;
+int rev=0;
+int origin=n;
+while(n>=1)
+{
+int rem=n%10;
+rev=rev*10+rem;
+n=n/10;
+}
+if(rev==n)
+System.out.println("yes");
+else
+System.out.println("No");
+}
+}
+===================================
+# Armstrong (number is same as sum of cube of its digits)
+public static void main(String args[])
+{
+int n =154;
+int temp=n;
+int r,sum=0;
+while(n>=1)
+{
+r=n%10;
+sum=sum+r*r*r;
+n=n/10;
+}
+if(temp==sum)
+System.out.println("yes")
+else
+System.out.println("No");
+}
+=============================================
+#prime number(which is not divisible of any number other than  1 and itself)
+public class Prime{
+public static void main( String args[])
+{
+int n =67;
+boolean isPrime=true;
+if(n<=1)
+ System.out.println("It is not prime");
+for(int i=2;i<=n/2;i++)
+{
+if(n%i==0)
+isPrime=false;
+breck;
+}
+if (isPrime)
+ System.out.println("yes");
+else 
+System.out.println("no");
+}
+}
+===============================================================================
+#prime number between 1-100
+public class Prime{
+public static void main (String args[])
+{
+int n=100;
+boolean isPrime		;
+for(int i=2;i<=n;i++)
+{
+isPrime=true;
+for(int m=2;m<=i/2;m++)
+{
+if(i%m==0)
+{
+isPrime=false;
+break;
+}
+}
+if(isPrime)
+System.out.println("Prime number:" +i);
+}
+}
+}
+===========================================================
+#factorial of number [5!=1*2*3*4*5=120]
+public class fact{
+public static void main(String args[])
+{
+int n=10;
+int fact=1
+for(i=1;i<=n;i++)
+{
+fact=fact*i;
+}
+System.out,println(fact);
+}
+}
+# using recursion
+public class fact{
+public static int factorial(int n)                               /* why static: because main is static, it cannot call non-static methods directly we will have to create oblect of                       
+if(n==0||n==1)                                                                      class and then we can call factorial method*/
+{
+ return 1;
+else
+ return n*factorial(n-1);
+}                                                                     
+public static void main(String args[])
+{
+int n=10;
+int fact=factorial(n);
+System.out,println(fact);
+}
+}
+#factorial of given ranges
+public class fact{
+public static void main(String args[])
+{
+int range=15;
+for(int i=2;i<=range;i++)
+{
+int fact=1;                                                                    /*use long float because int will over flow after 12!*/
+for(int f=1;f<=i;f++)
+{ fact=fact*f;
+}
+System.out.println("fact of" +i+" :"+fact);
+}
+}
+}
+============================================================================
+#fibbonacci(next number is sum of previous 2 numbers ie 0,1,1,2,3)
+public class Fibbo
+{
+public static void main(String args[])
+{
+int range=10;
+int a=0,b=1;
+int c;
+System.out.println(a+","+b);
+for(int i=2;i<=range;i++)
+{
+c=a+b;
+System.out.print(","+c);
+a=b;
+b=c;
+}
+}
+}
+===============================================
+#count number of digits
+public class digit{
+public static void main(String args[])
+{
+int n=6709353289;
+int count=0;
+while(n>=1)
+{
+count++;
+n=n/10;
+}
+System.out.println(count);
+}
+}
+====================
+#sum of digit
+int sum=0;
+while(n>=1)
+{
+sum=sum+n%10;
+n=n/10;
+}
+================================
+#power of number
+psvm(String args[])
+{
+int base=2,p=4;
+int res=1;
+for(int i=1;i<=p;i++)
+{
+res=res*base;
+}
+Sop(result);
+}
+=================================================
+#strong numbers
+/*functiom for factorial*/
+static int fact(int n)
+{
+int fact=1;
+for(int i=1;i<=n;i++)
+{
+fact=fact*i;
+}
+return fact;
+}
+psvm(String args[])
+{
+int n=18;
+int temp=n;
+int sum=0;
+ /*sum of  factorial of digits*/
+
+while(n>=1)
+{
+int digit=n%10;
+sum=sum+factorial(digit);
+n=n/10;
+}
+if (temp==sum)
+ sop("yea");
+else
+sop("no");
+}
+==================================
+#perfect(sum of its factors except itself is equal to number example=28)[factors of 6 are 1,2,3][factors are divisor of number]
+psvm(String args[])
+{
+int n=28;
+int sum=0
+
+for(int i=1;i<=n/2;i++)
+{
+if(n%i==0)
+sum=sum+i;
+}
+if (sum==n)
+sop("yes");
+else
+sop("no");
+}
+================================
+#GCD[gretest common divisor][no which divides both number]
+
+#1 using for loop (
+Slow)psvm(String args[])
+{
+int a=8;
+int  b=6;
+int gcd=1;
+for(int i=1;i<=a && i<=b;i++)
+{
+if(a%i==0 && b% i==0)
+{
+gcd=i;
+}
+}
+sop(gcd)
+}
+ 
+#2 using while(fast)
+psvm(String args[])
+{
+int a=9;
+int b=6;
+while(b!=0)
+{
+int temp=b;
+b=a%b;
+a=b;
+}
+sop(a);
+}
+#3 recursive
+static int gcd(int a,int b)
+{
+if(b==0);
+  return a;
+else 
+  return gcd(b,a%b)
+}
+psvm(String args[])
+{
+int a=56;
+int b=86;
+sop(gcd(a,b));
+}
+================================================
+#LCM[lowest common number divisible by both number][example===lcm of 12 and 15 is 60]
+                                      /*lcm=  (a*b)/gcd(a,b)*/
+ # using gcd
+psvm(string args[])
+{
+int a=8;
+int  b=6;
+int gcd=1;
+for(int i=1;i<=a && i<=b;i++)
+{
+if(a%i==0 && b% i==0)
+{
+gcd=i;
+}
+}
+int lcm=(a*b)/gcd;
+sop(lcm);
+}
+#without gcd
+psvm(String args[])
+{
+int a=15;intb=12;
+int max=(a>b)?a:b;
+int lcm=max;
+while(true)
+{
+if(lcm%a==0 && lcm%b==0)
+{
+sop(lcm);
+break;
+}
+lcm++;
+}
+}
+======================================
+#Number in words
+psvm(String args[])
+{
+int n=675;
+int rev=0;
+
+/* reverse number to extract digits)*/
+while(n>=1)
+{
+rev=rev*10+(n%10);
+n=n/10;
+}
+
+/*to extract digit in original order */
+while(n>=1)
+{
+ int digitt=n%10;
+switch(digit)
+{ case 0:System,out,print("zero");
+case 1:System,out,print("one");
+.....
+case 9 :System,out,print("nine");
+}
+n=n/10;
+
+}
+=========================
+#123 to one hundread twenty three
+public class NumberToWords {
+
+    static String oneToNine[] = {
+        "", "One", "Two", "Three", "Four",
+        "Five", "Six", "Seven", "Eight", "Nine"
+    };
+
+    static String tenToNineteen[] = {
+        "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen",
+        "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"
+    };
+
+    static String tens[] = {
+        "", "", "Twenty", "Thirty", "Forty",
+        "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"
+    };
+
+    public static void main(String args[]) {
+        int num = 123;
+
+        if (num == 0) {
+            System.out.println("Zero");
+            return;
+        }
+
+        if (num >= 100) {
+            System.out.print(oneToNine[num / 100] + " Hundred ");
+            num = num % 100;
+        }
+
+        if (num >= 10 && num <= 19) {
+            System.out.print(tenToNineteen[num - 10]);
+        } else {
+            System.out.print(tens[num / 10] + " ");
+            System.out.print(oneToNine[num % 10]);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)Perform the following operations on the database: ALTER TABLE, Pattern Matching using LIKE ,IN,BETWEEN and  Sorting 
+	a)Alter table
+		CREATE TABLE Student(
+  	  	RollNo INT,
+   		 Name VARCHAR(30),
+    		City VARCHAR(20));
+
+		ALTER TABLE Student ADD Marks INT;
+
+	b) Pattern matching
+	-- LIKE
+		SELECT * FROM Student
+		WHERE Name LIKE 'A%';
+
+	-- IN
+		SELECT * FROM Student
+		WHERE City IN ('Nagpur','Pune');
+
+	-- BETWEEN
+		SELECT * FROM Student
+		WHERE Marks BETWEEN 60 AND 90;
+	c) Sorting
+		SELECT * FROM Student ORDER BY Marks DESC;
+
+2) Operations on the database:Relational Operations (=, <,> ,<= ,>=,AND,OR) , Nested Queries , DROP TABLE 
+	a)Relational operator
+		SELECT * FROM Student WHERE Marks >= 60 AND City='Nagpur';
+
+		SELECT * FROM Student WHERE Marks < 40 OR City='Pune';
+
+	b)Nested query
+		SELECT Name FROM Student
+		WHERE Marks = (SELECT MAX(Marks) FROM Student);
+	c)Drop table
+		DROP TABLE Student;
+
+3)Aggregate Functions using GROUP BY and HAVING Clauses  and Nested Queries  
+	a) Aggregate Functions with GROUP BY and HAVING
+ 		SELECT City, AVG(Marks) FROM Student
+		GROUP BY City HAVING AVG(Marks) > 60;
+
+	b) SELECT Name
+		FROM Student WHERE Marks > (
+   		SELECT AVG(Marks) FROM Student);
+
+4) Create , Drop view and sorting 
+	a) Create view 
+		CREATE VIEW StudentView AS
+		SELECT Name, Marks FROM Student;
+	
+	b)Drop view 
+		DROP VIEW StudentView;
+	c) sorting 
+		SELECT * FROM Student ORDER BY Name ASC;
+5) Create tables with: primary and foreign key
+	CREATE TABLE Department(DeptID INT PRIMARY KEY, DeptName VARCHAR(30));
+
+	CREATE TABLE Employee( EmpID INT PRIMARY KEY, EmpName VARCHAR(30), DeptID INT, FOREIGN KEY(DeptID) REFERENCES Department(DeptID));
+
+6) Constraints
+	CREATE TABLE Customer(
+   	 CustID INT PRIMARY KEY,
+   	 CustName VARCHAR(30) NOT NULL,
+    	Email VARCHAR(40) UNIQUE,
+    	City VARCHAR(20) DEFAULT 'Nagpur',
+    	Age INT CHECK(Age >= 18)
+	);
+7) Create database and DLL statements:
+	CREATE TABLE Product(Pid INT, Pname VARCHAR(30),Price INT);
+	ALTER TABLE Product ADD Quantity INT;
+	DROP TABLE Product;
+   DML operations:
+	INSERT INTO Product VALUES(1,'Mouse',500,10);
+	UPDATE Product SET Price=700 WHERE Pid=1;
+	DELETE FROM Product WHERE Pid=1;
+
+8)Set operations:
+	a)UNION
+		SELECT City FROM Customer
+		UNION
+		SELECT City FROM Supplier;
+	b)UNION ALL
+		SELECT City FROM Customer
+		UNION ALL
+		SELECT City FROM Supplier;
+	c) INTERSECT
+		SELECT City FROM Customer
+		INTERSECT
+		SELECT City FROM Supplier;
+	d)MINUS
+		SELECT City FROM Customer
+		MINUS
+		SELECT City FROM Supplier;
+   ALTER table operations 
+	ALTER TABLE Customer
+	ADD Phone VARCHAR(15);
+
+	ALTER TABLE Customer
+	MODIFY Phone VARCHAR(20);
+
+	ALTER TABLE Customer
+	DROP COLUMN Phone;
+
+ 
+  
+
+
+
